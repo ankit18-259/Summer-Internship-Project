@@ -1,0 +1,4 @@
+proc SCHEMATIC_SIP_NAND {} {
+make pmos -name M0 -origin {1270 410}
+}
+
