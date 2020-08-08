@@ -1,0 +1,4 @@
+proc SCHEMATIC_SIP_NOR {} {
+make pmos -name M0 -origin {700 170}
+}
+
