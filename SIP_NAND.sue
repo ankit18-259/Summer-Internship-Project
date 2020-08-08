@@ -1,0 +1,8 @@
+proc SCHEMATIC_SIP_NAND {} {
+make pmos -name M0 -origin {1270 410}
+make pulse -name V0 -origin {1150 450}
+make global -name gnd -origin {1150 490}
+make name_net -name vin -origin {1150 410}
+  make_wire 1150 410 1210 410
+}
+

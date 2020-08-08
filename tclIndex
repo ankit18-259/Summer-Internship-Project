@@ -6,4 +6,4 @@
 # element name is the name of a command and the value is
 # a script that loads the command.
 
-set auto_index(SCHEMATIC_SIP_NAND) [list source [file join $dir SIP_NAND.sue]]
+set auto_index(SCHEMATIC_SIP_NAND) [list source [file join $dir SIP_NAND1.sue]]
