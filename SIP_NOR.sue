@@ -1,4 +1,48 @@
 proc SCHEMATIC_SIP_NOR {} {
-make pmos -name M0 -origin {700 170}
+make pmos -name M0 -origin {720 40}
+make pmos -name M1 -origin {720 200}
+make nmos -name M2 -origin {640 360}
+make nmos -name M3 -origin {800 360}
+make global -name gnd -origin {720 460}
+make global -orient RXY -name vdd -origin {720 -60}
+make output -name Y -origin {890 260}
+make name_net -name A -origin {660 40}
+make name_net -name A -origin {580 360}
+make input -name A -origin {450 150}
+make input -name B -origin {450 190}
+make name_net -name B -origin {660 200}
+make name_net -name B -origin {740 360}
+  make_wire 720 160 720 80
+  make_wire 720 280 640 280
+  make_wire 640 280 640 320
+  make_wire 720 280 800 280
+  make_wire 800 280 800 320
+  make_wire 640 400 640 430
+  make_wire 800 430 800 400
+  make_wire 720 430 640 430
+  make_wire 720 430 800 430
+  make_wire 720 430 720 460
+  make_wire 720 0 720 -60
+  make_wire 720 260 890 260
+  make_wire 720 240 720 260
+  make_wire 720 260 720 280
+}
+
+proc ICON_SIP_NOR args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 30} -name B
+icon_term -type output -origin {-10 10} -name Y
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 30} -label B
+icon_property -origin {-20 10} -anchor e -label Y
+icon_property -origin {-90 -50} -label {$name}
+icon_property -origin {-90 10} -label SIP_NOR
+icon_property -origin {-90 50} -label {example_param=$example_param}
+  icon_property -origin {-90 110} -type user -name name -default x
+  icon_property -origin {-90 130} -type user -name example_param -default 1.0
+  icon_arc -140 -30 -100 50 -start 284 -extent 157
+  icon_arc -170 -30 -30 50 -start 258 -extent 204
+  icon_arc -30 0 -10 20 -start 0 -extent 359
 }
 

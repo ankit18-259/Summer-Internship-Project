@@ -1,0 +1,30 @@
+proc SCHEMATIC_SIP_AND {} {
+make SIP_NAND -name xi0 -origin {3460 870}
+make SIP_NOT -name xi1 -origin {3610 870}
+make output -name Y -origin {3660 880}
+make input -name A -origin {3280 860}
+make input -name B -origin {3280 900}
+  make_wire 3440 880 3510 880
+  make_wire 3600 880 3660 880
+  make_wire 3280 860 3360 860
+  make_wire 3280 900 3360 900
+}
+
+proc ICON_SIP_AND args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 30} -name B
+icon_term -type output -origin {-20 10} -name Y
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 30} -label B
+icon_property -origin {-30 10} -anchor e -label Y
+icon_property -origin {-90 -50} -label {$name}
+icon_property -origin {-100 10} -label SIP_AND
+icon_property -origin {-90 50} -label {example_param=$example_param}
+  icon_property -origin {-90 110} -type user -name name -default x
+  icon_property -origin {-90 130} -type user -name example_param -default 1.0
+  icon_line -100 -30 -100 40
+  icon_line -100 40 -100 50
+  icon_arc -180 -30 -20 50 -start 266 -extent 184
+}
+

@@ -1,0 +1,12 @@
+proc SCHEMATIC_SIP_AND {} {
+make SIP_NAND -name xi0 -origin {3460 870}
+make SIP_NOT -name xi1 -origin {3610 870}
+make output -name Y -origin {3660 880}
+make input -name A -origin {3280 860}
+make input -name B -origin {3280 900}
+  make_wire 3440 880 3510 880
+  make_wire 3600 880 3660 880
+  make_wire 3280 860 3360 860
+  make_wire 3280 900 3360 900
+}
+

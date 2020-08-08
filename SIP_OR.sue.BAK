@@ -1,0 +1,12 @@
+proc SCHEMATIC_SIP_OR {} {
+make SIP_NOR -name xi0 -origin {620 70}
+make SIP_NOT -name xi1 -origin {780 70}
+make output -name Y -origin {830 80}
+make input -name A -origin {410 60}
+make input -name B -origin {410 100}
+  make_wire 610 80 680 80
+  make_wire 770 80 830 80
+  make_wire 410 60 520 60
+  make_wire 410 100 520 100
+}
+

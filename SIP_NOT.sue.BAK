@@ -1,0 +1,16 @@
+proc SCHEMATIC_SIP_NOT {} {
+make pmos -name M0 -origin {2640 600}
+make nmos -name M1 -origin {2640 760}
+make name_net -name A -origin {2580 600}
+make name_net -name A -origin {2580 760}
+make output -name Y -origin {2750 680}
+make global -orient RXY -name vdd -origin {2640 490}
+make global -name gnd -origin {2640 860}
+make input -name A -origin {2480 680}
+  make_wire 2640 800 2640 860
+  make_wire 2750 680 2640 680
+  make_wire 2640 680 2640 640
+  make_wire 2640 680 2640 720
+  make_wire 2640 490 2640 560
+}
+

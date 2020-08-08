@@ -1,2 +1,30 @@
 proc SCHEMATIC_SIP_NOR {} {
+make pmos -name M0 -origin {720 40}
+make pmos -name M1 -origin {720 200}
+make nmos -name M2 -origin {640 360}
+make nmos -name M3 -origin {800 360}
+make global -name gnd -origin {720 460}
+make global -orient RXY -name vdd -origin {720 -60}
+make output -name Y -origin {890 260}
+make name_net -name A -origin {660 40}
+make name_net -name A -origin {580 360}
+make input -name A -origin {450 150}
+make input -name B -origin {450 190}
+make name_net -name B -origin {660 200}
+make name_net -name B -origin {740 360}
+  make_wire 720 160 720 80
+  make_wire 720 280 640 280
+  make_wire 640 280 640 320
+  make_wire 720 280 800 280
+  make_wire 800 280 800 320
+  make_wire 640 400 640 430
+  make_wire 800 430 800 400
+  make_wire 720 430 640 430
+  make_wire 720 430 800 430
+  make_wire 720 430 720 460
+  make_wire 720 0 720 -60
+  make_wire 720 260 890 260
+  make_wire 720 240 720 260
+  make_wire 720 260 720 280
 }
+

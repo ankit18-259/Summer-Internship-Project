@@ -1,0 +1,4 @@
+proc SCHEMATIC_SIP_TestBench {} {
+make SIP_NOR -name xi0 -origin {820 90}
+}
+
