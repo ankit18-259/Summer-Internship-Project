@@ -1,4 +1,5 @@
 proc SCHEMATIC_SIP_XNOR {} {
+
 make SIP_XOR -name xi0 -origin {-230 110}
 make SIP_NOT -name xi1 -origin {-110 110}
 make input -name A -origin {-360 110}
@@ -8,21 +9,23 @@ make output -name Y -origin {-90 120}
   make_wire -260 120 -210 120
   make_wire -120 120 -90 120
   make_wire -360 110 -330 110
+
 }
 
 proc ICON_SIP_XNOR args {
-
   icon_setup $args {{origin {0 0}} {orient R0} {name x}}
-icon_term -type input -origin {-100 0} -name Vin_A
-icon_term -type input -origin {-100 20} -name Vin_B
-icon_term -type output -origin {100 0} -name Vout
-icon_property -origin {-90 0} -label Vin_A
-icon_property -origin {-90 20} -label Vin_B
-icon_property -origin {90 0} -anchor e -label Vout
+icon_term -type input -origin {-80 -10} -name A
+icon_term -type input -origin {-80 30} -name B
+icon_term -type output -origin {0 10} -name Y
+icon_property -origin {-80 -10} -label A
+icon_property -origin {-80 30} -label B
 icon_property -origin {-90 -50} -label {$name}
-icon_property -origin {-90 -30} -label SIP_XNOR
-  icon_line -100 -40 100 -40 100 40 -100 40 -100 -40
+icon_property -origin {-80 10} -label SIP_XNOR
   icon_property -origin {-90 50} -type user -name name -default x
-
+icon_property -origin {-20 10} -label Y
+  icon_arc -150 -20 -20 40 -start 276 -extent 169
+  icon_arc -90 -20 -70 40 -start 276 -extent 173
+  icon_arc -100 -20 -80 40 -start 276 -extent 173
+  icon_arc -20 0 0 20 -start 0 -extent 359
 }
 

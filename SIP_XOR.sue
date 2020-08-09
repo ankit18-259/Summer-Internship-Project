@@ -3,28 +3,29 @@ make SIP_NAND -name xi0 -origin {2980 100}
 make SIP_NAND -name xi1 -origin {2980 290}
 make SIP_NAND -name xi2 -origin {3140 170}
 make SIP_NAND -name xi3 -origin {2740 190}
-make output -name Y -origin {3120 180}
+make output -name Y -origin {3130 180}
 make input -name A -origin {2500 180}
 make input -name B -origin {2500 220}
   make_wire 2850 280 2880 280
   make_wire 2880 130 2850 130
-  make_wire 2720 200 2850 200
+  make_wire 2730 200 2850 200
   make_wire 2500 90 2880 90
   make_wire 2640 180 2500 180
   make_wire 2500 320 2880 320
   make_wire 2500 220 2500 320
   make_wire 2500 220 2640 220
   make_wire 2500 90 2500 180
+  make_wire 2970 160 3040 160
+  make_wire 2970 110 2970 160
+  make_wire 2970 200 2970 300
+  make_wire 2880 320 2880 280
+  make_wire 2970 200 3040 200
   make_wire 2850 130 2850 200
   make_wire 2850 200 2850 280
-  make_wire 2960 160 3040 160
-  make_wire 2960 110 2960 160
-  make_wire 2960 200 2960 300
-  make_wire 2880 320 2880 280
-  make_wire 2960 200 3040 200
 }
 
 proc ICON_SIP_XOR args {
+
   icon_setup $args {{origin {0 0}} {orient R0} {name x}}
 icon_term -type input -origin {-100 -10} -name A
 icon_term -type input -origin {-100 30} -name B
@@ -38,5 +39,6 @@ icon_property -origin {-90 10} -label SIP_XOR
   icon_arc -140 -30 -90 50 -start 285 -extent 157
   icon_arc -150 -30 -100 50 -start 285 -extent 157
   icon_arc -200 -30 -30 50 -start 276 -extent 173
+
 }
 

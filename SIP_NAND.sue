@@ -1,48 +1,48 @@
 proc SCHEMATIC_SIP_NAND {} {
-make pmos -name M0 -origin {1120 160}
-make pmos -name M1 -origin {1280 160}
-make nmos -name M2 -origin {1200 320}
-make nmos -name M3 -origin {1200 440}
-make global -name gnd -origin {1200 510}
-make output -name Y -origin {1420 260}
-make name_net -name A -origin {1060 160}
-make name_net -name B -origin {1220 160}
-make name_net -name A -origin {1140 320}
-make name_net -name B -origin {1140 440}
-make input -name A -origin {960 240}
-make input -name B -origin {960 280}
-make global -orient RXY -name vdd -origin {1200 30}
-  make_wire 1120 120 1120 80
-  make_wire 1280 80 1280 120
-  make_wire 1120 200 1120 240
-  make_wire 1280 240 1280 200
-  make_wire 1200 240 1120 240
-  make_wire 1200 240 1280 240
-  make_wire 1200 260 1200 280
-  make_wire 1200 260 1200 240
-  make_wire 1200 360 1200 400
-  make_wire 1200 480 1200 510
-  make_wire 1420 260 1200 260
-  make_wire 1200 30 1200 80
-  make_wire 1200 80 1120 80
-  make_wire 1200 80 1280 80
+make pmos -name M0 -origin {1200 400}
+make pmos -name M1 -origin {1360 400}
+make global -orient RXY -name gnd -origin {1280 280}
+make nmos -name M2 -origin {1280 560}
+make nmos -name M3 -origin {1280 680}
+make global -name gnd -origin {1280 770}
+make output -name Y -origin {1460 500}
+make input -name B -origin {1040 510}
+make input -name A -origin {1040 480}
+make name_net -name A -origin {1140 400}
+make name_net -name A -origin {1220 560}
+make name_net -name B -origin {1300 400}
+make name_net -name B -origin {1220 680}
+  make_wire 1200 360 1200 320
+  make_wire 1360 320 1360 360
+  make_wire 1200 440 1200 480
+  make_wire 1360 480 1360 440
+  make_wire 1280 280 1280 320
+  make_wire 1280 320 1200 320
+  make_wire 1280 320 1360 320
+  make_wire 1280 600 1280 640
+  make_wire 1280 480 1200 480
+  make_wire 1280 480 1360 480
+  make_wire 1280 720 1280 770
+  make_wire 1280 500 1460 500
+  make_wire 1280 480 1280 500
+  make_wire 1280 500 1280 520
 }
 
 proc ICON_SIP_NAND args {
   icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
 icon_term -type input -origin {-100 -10} -name A
 icon_term -type input -origin {-100 30} -name B
-icon_term -type output -origin {-20 10} -name Y
+icon_term -type output -origin {-10 10} -name Y
 icon_property -origin {-90 -10} -label A
 icon_property -origin {-90 30} -label B
-icon_property -origin {-30 10} -anchor e -label Y
+icon_property -origin {-20 10} -anchor e -label Y
 icon_property -origin {-90 -50} -label {$name}
 icon_property -origin {-100 10} -label SIP_NAND
 icon_property -origin {-90 50} -label {example_param=$example_param}
   icon_property -origin {-90 110} -type user -name name -default x
   icon_property -origin {-90 130} -type user -name example_param -default 1.0
   icon_line -100 -20 -100 40
-  icon_arc -150 -20 -40 40 -start 266 -extent 195
-  icon_arc -40 0 -20 20 -start 0 -extent 359
+  icon_arc -150 -20 -30 40 -start 262 -extent 199
+  icon_arc -30 0 -10 20 -start 0 -extent 359
 }
 

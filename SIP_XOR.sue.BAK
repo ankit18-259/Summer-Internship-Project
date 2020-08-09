@@ -26,12 +26,12 @@ make input -name B -origin {2500 220}
 
 proc ICON_SIP_XOR args {
   icon_setup $args {{origin {0 0}} {orient R0} {name x}}
-icon_term -type input -origin {-100 -10} -name vin_a
-icon_term -type input -origin {-100 30} -name vin_b
-icon_term -type output -origin {-30 10} -name vout
-icon_property -origin {-90 -10} -label vin_a
-icon_property -origin {-90 30} -label vin_b
-icon_property -origin {-10 20} -anchor e -label vout
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 30} -name B
+icon_term -type output -origin {-30 10} -name Y
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 30} -label B
+icon_property -origin {-20 20} -anchor e -label Y
 icon_property -origin {-90 -50} -label {$name}
 icon_property -origin {-90 10} -label SIP_XOR
   icon_property -origin {-90 50} -type user -name name -default x
