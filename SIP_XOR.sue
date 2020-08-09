@@ -3,9 +3,9 @@ make SIP_NAND -name xi0 -origin {2980 100}
 make SIP_NAND -name xi1 -origin {2980 290}
 make SIP_NAND -name xi2 -origin {3140 170}
 make SIP_NAND -name xi3 -origin {2740 190}
-make input -name vin_a -origin {2500 180}
-make input -name vin_b -origin {2500 220}
-make output -name vout -origin {3120 180}
+make output -name Y -origin {3120 180}
+make input -name A -origin {2500 180}
+make input -name B -origin {2500 220}
   make_wire 2850 280 2880 280
   make_wire 2880 130 2850 130
   make_wire 2720 200 2850 200
@@ -26,15 +26,17 @@ make output -name vout -origin {3120 180}
 
 proc ICON_SIP_XOR args {
   icon_setup $args {{origin {0 0}} {orient R0} {name x}}
-icon_term -type input -origin {-100 0} -name vin_a
-icon_term -type input -origin {-100 20} -name vin_b
-icon_term -type output -origin {100 0} -name vout
-icon_property -origin {-90 0} -label vin_a
-icon_property -origin {-90 20} -label vin_b
-icon_property -origin {90 0} -anchor e -label vout
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 30} -name B
+icon_term -type output -origin {-30 10} -name Y
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 30} -label B
+icon_property -origin {-20 20} -anchor e -label Y
 icon_property -origin {-90 -50} -label {$name}
-icon_property -origin {-90 -30} -label SIP_XOR
-  icon_line -100 -40 100 -40 100 40 -100 40 -100 -40
+icon_property -origin {-90 10} -label SIP_XOR
   icon_property -origin {-90 50} -type user -name name -default x
+  icon_arc -140 -30 -90 50 -start 285 -extent 157
+  icon_arc -150 -30 -100 50 -start 285 -extent 157
+  icon_arc -200 -30 -30 50 -start 276 -extent 173
 }
 
