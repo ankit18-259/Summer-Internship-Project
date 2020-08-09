@@ -26,6 +26,7 @@ make input -name B -origin {2500 220}
 
 proc ICON_SIP_XOR args {
 
+
   icon_setup $args {{origin {0 0}} {orient R0} {name x}}
 icon_term -type input -origin {-100 -10} -name A
 icon_term -type input -origin {-100 30} -name B
@@ -39,6 +40,7 @@ icon_property -origin {-90 10} -label SIP_XOR
   icon_arc -140 -30 -90 50 -start 285 -extent 157
   icon_arc -150 -30 -100 50 -start 285 -extent 157
   icon_arc -200 -30 -30 50 -start 276 -extent 173
+
 
 }
 

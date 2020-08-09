@@ -8,6 +8,7 @@
 
 set auto_index(SCHEMATIC_SIP_AND) [list source [file join $dir SIP_AND.sue]]
 set auto_index(ICON_SIP_AND) [list source [file join $dir SIP_AND.sue]]
+set auto_index(SCHEMATIC_SIP_CLA_LOGIC) [list source [file join $dir SIP_CLA_LOGIC.sue]]
 set auto_index(SCHEMATIC_SIP_NAND) [list source [file join $dir SIP_NAND.sue]]
 set auto_index(ICON_SIP_NAND) [list source [file join $dir SIP_NAND.sue]]
 set auto_index(SCHEMATIC_SIP_NOR) [list source [file join $dir SIP_NOR.sue]]

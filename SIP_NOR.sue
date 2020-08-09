@@ -1,4 +1,5 @@
 proc SCHEMATIC_SIP_NOR {} {
+
 make pmos -name M0 -origin {720 40}
 make pmos -name M1 -origin {720 200}
 make nmos -name M2 -origin {640 360}
@@ -26,6 +27,7 @@ make name_net -name B -origin {740 360}
   make_wire 720 260 890 260
   make_wire 720 240 720 260
   make_wire 720 260 720 280
+
 }
 
 proc ICON_SIP_NOR args {
@@ -38,7 +40,6 @@ icon_property -origin {-90 30} -label B
 icon_property -origin {-20 10} -anchor e -label Y
 icon_property -origin {-90 -50} -label {$name}
 icon_property -origin {-90 10} -label SIP_NOR
-icon_property -origin {-90 50} -label {example_param=$example_param}
   icon_property -origin {-90 110} -type user -name name -default x
   icon_property -origin {-90 130} -type user -name example_param -default 1.0
   icon_arc -140 -30 -100 50 -start 284 -extent 157

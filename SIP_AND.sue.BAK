@@ -5,7 +5,7 @@ make SIP_NOT -name xi1 -origin {3610 870}
 make output -name Y -origin {3660 880}
 make input -name A -origin {3280 860}
 make input -name B -origin {3280 900}
-  make_wire 3440 880 3510 880
+  make_wire 3450 880 3510 880
   make_wire 3600 880 3660 880
   make_wire 3280 860 3360 860
   make_wire 3280 900 3360 900
@@ -22,7 +22,7 @@ icon_property -origin {-90 30} -label B
 icon_property -origin {-30 10} -anchor e -label Y
 icon_property -origin {-90 -50} -label {$name}
 icon_property -origin {-100 10} -label SIP_AND
-icon_property -origin {-90 50} -label {example_param=$example_param}
+icon_property -origin {-90 90} -label {example_param=$example_param}
   icon_property -origin {-90 110} -type user -name name -default x
   icon_property -origin {-90 130} -type user -name example_param -default 1.0
   icon_line -100 -30 -100 40

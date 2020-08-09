@@ -10,3 +10,20 @@ make input -name B -origin {410 100}
   make_wire 410 100 520 100
 }
 
+proc ICON_SIP_OR args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-100 -10} -name A
+icon_term -type input -origin {-100 30} -name B
+icon_term -type output -origin {-20 10} -name Y
+icon_property -origin {-90 -10} -label A
+icon_property -origin {-90 30} -label B
+icon_property -origin {-30 10} -anchor e -label Y
+icon_property -origin {-90 -50} -label {$name}
+icon_property -origin {-90 10} -label SIP_OR
+icon_property -origin {-90 50} -label {example_param=$example_param}
+  icon_property -origin {-90 110} -type user -name name -default x
+  icon_property -origin {-90 130} -type user -name example_param -default 1.0
+  icon_arc -140 -30 -100 50 -start 294 -extent 139
+  icon_arc -160 -30 -20 50 -start 251 -extent 220
+}
+

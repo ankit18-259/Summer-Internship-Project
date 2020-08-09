@@ -1,4 +1,5 @@
 proc SCHEMATIC_SIP_XOR {} {
+
 make SIP_NAND -name xi0 -origin {2980 100}
 make SIP_NAND -name xi1 -origin {2980 290}
 make SIP_NAND -name xi2 -origin {3140 170}
@@ -22,11 +23,10 @@ make input -name B -origin {2500 220}
   make_wire 2970 200 3040 200
   make_wire 2850 130 2850 200
   make_wire 2850 200 2850 280
+
 }
 
 proc ICON_SIP_XOR args {
-
-
   icon_setup $args {{origin {0 0}} {orient R0} {name x}}
 icon_term -type input -origin {-100 -10} -name A
 icon_term -type input -origin {-100 30} -name B
@@ -36,11 +36,9 @@ icon_property -origin {-90 30} -label B
 icon_property -origin {-20 20} -anchor e -label Y
 icon_property -origin {-90 -50} -label {$name}
 icon_property -origin {-90 10} -label SIP_XOR
-  icon_property -origin {-90 50} -type user -name name -default x
+  icon_property -origin {-90 60} -type user -name name -default x
   icon_arc -140 -30 -90 50 -start 285 -extent 157
   icon_arc -150 -30 -100 50 -start 285 -extent 157
   icon_arc -200 -30 -30 50 -start 276 -extent 173
-
-
 }
 
