@@ -1,4 +1,5 @@
 proc SCHEMATIC_SIP_NOT {} {
+
 make pmos -name M0 -origin {2640 600}
 make nmos -name M1 -origin {2640 760}
 make name_net -name A -origin {2580 600}
@@ -12,19 +13,18 @@ make input -name A -origin {2480 680}
   make_wire 2640 680 2640 640
   make_wire 2640 680 2640 720
   make_wire 2640 490 2640 560
+
 }
 
 proc ICON_SIP_NOT args {
-  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
 icon_term -type input -origin {-100 10} -name A
 icon_term -type output -origin {-10 10} -name Y
 icon_property -origin {-100 20} -label A
 icon_property -origin {-20 10} -anchor e -label Y
 icon_property -origin {-90 -40} -label {$name}
 icon_property -origin {-90 10} -label SIP_NOT
-icon_property -origin {-90 60} -label {example_param=$example_param}
-  icon_property -origin {-90 100} -type user -name name -default x
-  icon_property -origin {-90 120} -type user -name example_param -default 1.0
+  icon_property -origin {-100 70} -type user -name name -default x
   icon_line -100 -30 -100 40 -100 -30
   icon_line -100 40 -100 50 -100 50 -100 50
   icon_line -100 50 -30 10 -100 -30 -100 -30

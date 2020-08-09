@@ -1,0 +1,26 @@
+proc SCHEMATIC_SIP_XOR {} {
+make SIP_NAND -name xi0 -origin {2980 100}
+make SIP_NAND -name xi1 -origin {2980 290}
+make SIP_NAND -name xi2 -origin {3140 170}
+make SIP_NAND -name xi3 -origin {2740 190}
+make input -name vin_a -origin {2500 180}
+make input -name vin_b -origin {2500 220}
+make output -name vout -origin {3120 180}
+  make_wire 2850 280 2880 280
+  make_wire 2880 130 2850 130
+  make_wire 2720 200 2850 200
+  make_wire 2500 90 2880 90
+  make_wire 2640 180 2500 180
+  make_wire 2500 320 2880 320
+  make_wire 2500 220 2500 320
+  make_wire 2500 220 2640 220
+  make_wire 2500 90 2500 180
+  make_wire 2850 130 2850 200
+  make_wire 2850 200 2850 280
+  make_wire 2960 160 3040 160
+  make_wire 2960 110 2960 160
+  make_wire 2960 200 2960 300
+  make_wire 2880 320 2880 280
+  make_wire 2960 200 3040 200
+}
+
