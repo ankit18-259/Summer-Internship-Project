@@ -1,5 +1,4 @@
 proc SCHEMATIC_SIP_TestBench {} {
-make SIP_XOR -name xi0 -origin {840 -50}
 make SIP_XNOR -name xi1 -origin {810 40}
 make SIP_OR -name xi2 -origin {830 170}
 make SIP_NOR -name xi3 -origin {830 270}
@@ -9,19 +8,16 @@ make global -name gnd -origin {440 160}
 make global -name gnd -origin {520 160}
 make name_net -name A -origin {440 40}
 make name_net -name B -origin {520 40}
-make name_net -name B -origin {680 -20}
 make name_net -name B -origin {680 70}
 make name_net -name B -origin {680 200}
 make name_net -name B -origin {680 300}
 make name_net -name B -origin {910 -20}
 make name_net -name B -origin {910 70}
-make name_net -name A -origin {680 -60}
 make name_net -name A -origin {910 -60}
 make name_net -name A -origin {910 30}
 make name_net -name A -origin {680 30}
 make name_net -name A -origin {680 160}
 make name_net -name A -origin {680 260}
-make name_net -name xor_out -origin {860 -40}
 make name_net -name xnor_out -origin {860 50}
 make name_net -name or_out -origin {860 180}
 make name_net -name nor_out -origin {860 280}
@@ -30,10 +26,16 @@ make name_net -name and_out -origin {1110 -40}
 make name_net -name A -origin {960 210}
 make name_net -name not_out -origin {1120 210}
 make SIP_NOT -name xi6 -origin {1090 200}
-make pulse -name V0 -rise_time 0 -fall_time 0 -origin {440 120}
-make pulse -name V1 -rise_time 0 -fall_time 0 -pulse_width 6ns -period 12ns -origin {520 120}
-  make_wire 680 -60 740 -60
-  make_wire 680 -20 740 -20
+make pulse -name V0 -pulse_voltage 1.3V -rise_time 0 -fall_time 0 -origin {440 120}
+make pulse -name V1 -pulse_voltage 1.3V -rise_time 0 -fall_time 0 -pulse_width 6ns -period 12ns -origin {520 120}
+make SIP_XOR -name xi0 -origin {840 -180}
+make SIP_NOT -name xi7 -origin {540 -130}
+make SIP_NOT -name xi8 -origin {540 -240}
+make name_net -name A -origin {400 -230}
+make name_net -name B -origin {400 -120}
+make name_net -name A -origin {680 -200}
+make name_net -name B -origin {680 -180}
+make name_net -name xor_out -origin {1010 -200}
   make_wire 680 30 730 30
   make_wire 680 70 730 70
   make_wire 680 160 730 160
@@ -46,7 +48,6 @@ make pulse -name V1 -rise_time 0 -fall_time 0 -pulse_width 6ns -period 12ns -ori
   make_wire 910 70 960 70
   make_wire 440 40 440 80
   make_wire 520 40 520 80
-  make_wire 810 -40 860 -40
   make_wire 810 50 860 50
   make_wire 810 180 860 180
   make_wire 1050 -40 1110 -40
@@ -54,5 +55,14 @@ make pulse -name V1 -rise_time 0 -fall_time 0 -pulse_width 6ns -period 12ns -ori
   make_wire 860 280 820 280
   make_wire 960 210 990 210
   make_wire 1080 210 1120 210
+  make_wire 530 -160 740 -160
+  make_wire 440 -230 400 -230
+  make_wire 530 -140 740 -140
+  make_wire 440 -120 400 -120
+  make_wire 680 -200 740 -200
+  make_wire 740 -180 680 -180
+  make_wire 530 -140 530 -120
+  make_wire 530 -230 530 -160
+  make_wire 940 -200 1010 -200
 }
 

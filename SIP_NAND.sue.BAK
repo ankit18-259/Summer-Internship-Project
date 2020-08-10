@@ -1,12 +1,31 @@
 proc SCHEMATIC_SIP_NAND {} {
 make pmos -name M0 -origin {1200 400}
 make pmos -name M1 -origin {1360 400}
+make global -orient RXY -name gnd -origin {1280 280}
+make nmos -name M2 -origin {1280 560}
+make nmos -name M3 -origin {1280 680}
+make global -name gnd -origin {1280 770}
+make output -name Y -origin {1460 500}
+make input -name B -origin {1040 510}
+make input -name A -origin {1040 480}
+make name_net -name A -origin {1140 400}
+make name_net -name A -origin {1220 560}
+make name_net -name B -origin {1300 400}
+make name_net -name B -origin {1220 680}
   make_wire 1200 360 1200 320
-  make_wire 1200 320 1360 320
   make_wire 1360 320 1360 360
   make_wire 1200 440 1200 480
-  make_wire 1200 480 1360 480
   make_wire 1360 480 1360 440
+  make_wire 1280 280 1280 320
+  make_wire 1280 320 1200 320
+  make_wire 1280 320 1360 320
+  make_wire 1280 600 1280 640
+  make_wire 1280 480 1200 480
+  make_wire 1280 480 1360 480
+  make_wire 1280 720 1280 770
+  make_wire 1280 500 1460 500
+  make_wire 1280 480 1280 500
+  make_wire 1280 500 1280 520
 }
 
 proc ICON_SIP_NAND args {

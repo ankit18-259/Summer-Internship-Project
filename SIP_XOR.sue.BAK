@@ -1,42 +1,43 @@
 proc SCHEMATIC_SIP_XOR {} {
-make SIP_NAND -name xi0 -origin {2980 100}
-make SIP_NAND -name xi1 -origin {2980 290}
-make SIP_NAND -name xi2 -origin {3140 170}
-make SIP_NAND -name xi3 -origin {2740 190}
-make output -name Y -origin {3120 180}
-make input -name A -origin {2500 180}
-make input -name B -origin {2500 220}
-  make_wire 2850 280 2880 280
-  make_wire 2880 130 2850 130
-  make_wire 2720 200 2850 200
-  make_wire 2500 90 2880 90
-  make_wire 2640 180 2500 180
-  make_wire 2500 320 2880 320
-  make_wire 2500 220 2500 320
-  make_wire 2500 220 2640 220
-  make_wire 2500 90 2500 180
-  make_wire 2850 130 2850 200
-  make_wire 2850 200 2850 280
-  make_wire 2960 160 3040 160
-  make_wire 2960 110 2960 160
-  make_wire 2960 200 2960 300
-  make_wire 2880 320 2880 280
-  make_wire 2960 200 3040 200
-}
-
-proc ICON_SIP_XOR args {
-  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
-icon_term -type input -origin {-100 -10} -name A
-icon_term -type input -origin {-100 30} -name B
-icon_term -type output -origin {-30 10} -name Y
-icon_property -origin {-90 -10} -label A
-icon_property -origin {-90 30} -label B
-icon_property -origin {-20 20} -anchor e -label Y
-icon_property -origin {-90 -50} -label {$name}
-icon_property -origin {-90 10} -label SIP_XOR
-  icon_property -origin {-90 50} -type user -name name -default x
-  icon_arc -140 -30 -90 50 -start 285 -extent 157
-  icon_arc -150 -30 -100 50 -start 285 -extent 157
-  icon_arc -200 -30 -30 50 -start 276 -extent 173
+make nmos -name M0 -origin {2480 2680}
+make nmos -name M1 -origin {2640 2670}
+make pmos -name M2 -origin {2480 2530}
+make pmos -name M3 -origin {2640 2530}
+make pmos -name M4 -origin {2480 2410}
+make pmos -name M5 -origin {2640 2410}
+make nmos -name M6 -origin {2480 2800}
+make nmos -name M7 -origin {2640 2790}
+make global -orient RXY -name vdd -origin {2540 2310}
+make global -name gnd -origin {2480 2840}
+make global -name gnd -origin {2640 2830}
+make output -name vout -origin {2640 2590}
+make input -name A -origin {2160 2400}
+make input -name B -origin {2160 2540}
+make input -name A_N -origin {2160 2480}
+make input -name B_N -origin {2160 2610}
+make name_net -name B_N -origin {2420 2410}
+make name_net -name A -origin {2420 2530}
+make name_net -name A_N -origin {2580 2410}
+make name_net -name B -origin {2580 2530}
+make name_net -name A_N -origin {2420 2680}
+make name_net -name B_N -origin {2420 2800}
+make name_net -name A -origin {2580 2670}
+make name_net -name B -origin {2580 2790}
+  make_wire 2640 2710 2640 2750
+  make_wire 2480 2310 2540 2310
+  make_wire 2480 2310 2480 2370
+  make_wire 2640 2310 2540 2310
+  make_wire 2640 2310 2640 2370
+  make_wire 2640 2570 2640 2590
+  make_wire 2640 2590 2640 2630
+  make_wire 2640 2590 2480 2590
+  make_wire 2480 2570 2480 2590
+  make_wire 2480 2590 2480 2640
+  make_wire 2480 2720 2480 2760
+  make_wire 2480 2470 2640 2470
+  make_wire 2480 2470 2480 2450
+  make_wire 2480 2470 2480 2490
+  make_wire 2640 2470 2640 2450
+  make_wire 2640 2470 2640 2490
 }
 
