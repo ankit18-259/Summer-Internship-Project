@@ -1,13 +1,13 @@
 proc SCHEMATIC_SIP_XNOR {} {
 make SIP_XOR -name xi0 -origin {-230 110}
-make SIP_NOT -name xi1 -origin {-110 110}
-make input -name A -origin {-360 100}
-make input -name B -origin {-360 140}
-make output -name Y -origin {-90 120}
-  make_wire -260 120 -210 120
-  make_wire -120 120 -90 120
-  make_wire -360 140 -330 140
-  make_wire -360 100 -330 100
+make SIP_NOT -name xi1 -origin {-110 90}
+make input -name A -origin {-360 80}
+make input -name B -origin {-360 120}
+make output -name Y -origin {-90 100}
+  make_wire -250 100 -210 100
+  make_wire -120 100 -90 100
+  make_wire -360 80 -330 80
+  make_wire -360 120 -330 120
 }
 
 proc ICON_SIP_XNOR args {
@@ -20,7 +20,7 @@ icon_property -origin {-80 30} -label B
 icon_property -origin {-90 -50} -label {$name}
 icon_property -origin {-80 10} -label SIP_XNOR
   icon_property -origin {-90 50} -type user -name name -default x
-icon_property -origin {-20 10} -label Y
+icon_property -origin {-10 10} -label Y
   icon_arc -150 -20 -20 40 -start 276 -extent 169
   icon_arc -90 -20 -70 40 -start 276 -extent 173
   icon_arc -100 -20 -80 40 -start 276 -extent 173

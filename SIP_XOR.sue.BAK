@@ -7,14 +7,10 @@ make pmos -name M4 -origin {2480 2410}
 make pmos -name M5 -origin {2640 2410}
 make nmos -name M6 -origin {2480 2800}
 make nmos -name M7 -origin {2640 2790}
-make global -orient RXY -name vdd -origin {2540 2310}
-make global -name gnd -origin {2480 2840}
-make global -name gnd -origin {2640 2830}
-make output -name vout -origin {2640 2590}
+make global -orient RXY -name vdd -origin {2560 2310}
+make global -name gnd -origin {2560 2860}
 make input -name A -origin {2160 2400}
 make input -name B -origin {2160 2540}
-make input -name A_N -origin {2160 2480}
-make input -name B_N -origin {2160 2610}
 make name_net -name B_N -origin {2420 2410}
 make name_net -name A -origin {2420 2530}
 make name_net -name A_N -origin {2580 2410}
@@ -23,10 +19,15 @@ make name_net -name A_N -origin {2420 2680}
 make name_net -name B_N -origin {2420 2800}
 make name_net -name A -origin {2580 2670}
 make name_net -name B -origin {2580 2790}
+make SIP_NOT -name xi0 -origin {2250 2670}
+make SIP_NOT -name xi1 -origin {2250 2780}
+make name_net -name A -origin {2070 2680}
+make name_net -name B -origin {2070 2790}
+make name_net -name A_N -origin {2310 2680}
+make name_net -name B_N -origin {2310 2790}
+make output -name Y -origin {2640 2590}
   make_wire 2640 2710 2640 2750
-  make_wire 2480 2310 2540 2310
   make_wire 2480 2310 2480 2370
-  make_wire 2640 2310 2540 2310
   make_wire 2640 2310 2640 2370
   make_wire 2640 2570 2640 2590
   make_wire 2640 2590 2640 2630
@@ -39,5 +40,31 @@ make name_net -name B -origin {2580 2790}
   make_wire 2480 2470 2480 2490
   make_wire 2640 2470 2640 2450
   make_wire 2640 2470 2640 2490
+  make_wire 2480 2840 2480 2860
+  make_wire 2640 2830 2640 2860
+  make_wire 2480 2860 2560 2860
+  make_wire 2560 2860 2640 2860
+  make_wire 2560 2310 2480 2310
+  make_wire 2560 2310 2640 2310
+  make_wire 2150 2680 2070 2680
+  make_wire 2240 2680 2310 2680
+  make_wire 2070 2790 2150 2790
+  make_wire 2240 2790 2310 2790
+}
+
+proc ICON_SIP_XOR args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
+icon_term -type input -origin {-100 -30} -name A
+icon_term -type input -origin {-100 10} -name B
+icon_term -type output -origin {-20 -10} -name Y
+icon_property -origin {-90 -30} -label A
+icon_property -origin {-90 10} -label B
+icon_property -origin {-20 -10} -anchor e -label Y
+icon_property -origin {-90 -70} -label {$name}
+icon_property -origin {-90 -10} -label SIP_XOR
+  icon_property -origin {-80 80} -type user -name name -default x
+  icon_arc -120 -50 -100 30 -start 268 -extent 182
+  icon_arc -110 -50 -90 30 -start 268 -extent 182
+  icon_arc -180 -50 -20 30 -start 268 -extent 186
 }
 
