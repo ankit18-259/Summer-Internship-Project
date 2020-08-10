@@ -1,4 +1,5 @@
 proc SCHEMATIC_SIP_NAND {} {
+
 make pmos -name M0 -origin {1200 400}
 make pmos -name M1 -origin {1360 400}
 make nmos -name M2 -origin {1280 560}
@@ -26,10 +27,10 @@ make global -orient RXY -name vdd -origin {1280 280}
   make_wire 1280 500 1460 500
   make_wire 1280 480 1280 500
   make_wire 1280 500 1280 520
+
 }
 
 proc ICON_SIP_NAND args {
-
   icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
 icon_term -type input -origin {-100 -10} -name A
 icon_term -type input -origin {-100 30} -name B
@@ -39,12 +40,10 @@ icon_property -origin {-90 30} -label B
 icon_property -origin {-20 10} -anchor e -label Y
 icon_property -origin {-90 -50} -label {$name}
 icon_property -origin {-100 10} -label SIP_NAND
-icon_property -origin {-90 50} -label {example_param=$example_param}
   icon_property -origin {-90 110} -type user -name name -default x
   icon_property -origin {-90 130} -type user -name example_param -default 1.0
   icon_line -100 -20 -100 40
   icon_arc -150 -20 -30 40 -start 262 -extent 199
   icon_arc -30 0 -10 20 -start 0 -extent 359
-
 }
 

@@ -20,7 +20,6 @@ icon_property -origin {-90 30} -label B
 icon_property -origin {-30 10} -anchor e -label Y
 icon_property -origin {-90 -50} -label {$name}
 icon_property -origin {-90 10} -label SIP_OR
-icon_property -origin {-90 50} -label {example_param=$example_param}
   icon_property -origin {-90 110} -type user -name name -default x
   icon_property -origin {-90 130} -type user -name example_param -default 1.0
   icon_arc -140 -30 -100 50 -start 294 -extent 139
