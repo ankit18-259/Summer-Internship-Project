@@ -5,14 +5,21 @@ make name_net -name A -origin {440 40}
 make name_net -name B -origin {520 40}
 make pulse -name V0 -pulse_voltage 1.3V -rise_time 0 -fall_time 0 -origin {440 120}
 make pulse -name V1 -pulse_voltage 1.3V -rise_time 0 -fall_time 0 -pulse_width 6ns -period 12ns -origin {520 120}
-make SIP_XOR -name xi0 -origin {820 -60}
-make SIP_XNOR -name xi1 -origin {800 30}
 make name_net -name A -origin {650 -90}
 make name_net -name A -origin {650 20}
 make name_net -name B -origin {650 -50}
 make name_net -name B -origin {650 60}
 make name_net -name xor_out -origin {880 -70}
 make name_net -name xnor_out -origin {880 40}
+make SIP_XOR -name xi0 -origin {820 -60}
+make SIP_XNOR -name xi1 -origin {800 30}
+make SIP_CLA_ADDER -name xi2 -origin {1600 470}
+make name_net -orient R90 -name z0_out -origin {1740 180}
+make name_net -orient R90 -name z1_out -origin {1740 200}
+make name_net -name A -origin {1520 -160}
+make name_net -name B -origin {1520 520}
+make name_net -name A -origin {1520 -140}
+make name_net -name B -origin {1520 540}
   make_wire 440 40 440 80
   make_wire 520 40 520 80
   make_wire 650 -90 720 -90

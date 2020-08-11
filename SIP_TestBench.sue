@@ -13,6 +13,103 @@ make name_net -name xor_out -origin {880 -70}
 make name_net -name xnor_out -origin {880 40}
 make SIP_XOR -name xi0 -origin {820 -60}
 make SIP_XNOR -name xi1 -origin {800 30}
+make SIP_CLA_ADDER -name xi2 -origin {1600 470}
+make name_net -orient R90 -name z0_out -origin {1740 180}
+make name_net -orient R90 -name z1_out -origin {1740 200}
+make name_net -name A -origin {1520 -160}
+make name_net -name B -origin {1520 520}
+make name_net -name A -origin {1520 -140}
+make name_net -name B -origin {1520 540}
+make name_net -name A -origin {1520 -120}
+make name_net -name A -origin {1520 -100}
+make name_net -name A -origin {1520 -80}
+make name_net -name A -origin {1520 -60}
+make name_net -name A -origin {1520 -40}
+make name_net -name A -origin {1520 -20}
+make name_net -name A -origin {1520 0}
+make name_net -name A -origin {1520 20}
+make name_net -name A -origin {1520 40}
+make name_net -name A -origin {1520 60}
+make name_net -name A -origin {1520 80}
+make name_net -name A -origin {1520 100}
+make name_net -name A -origin {1520 120}
+make name_net -name A -origin {1520 140}
+make name_net -name A -origin {1520 160}
+make name_net -name A -origin {1520 180}
+make name_net -name A -origin {1520 200}
+make name_net -name A -origin {1520 220}
+make name_net -name A -origin {1520 240}
+make name_net -name A -origin {1520 260}
+make name_net -name A -origin {1520 280}
+make name_net -name A -origin {1520 300}
+make name_net -name A -origin {1520 320}
+make name_net -name A -origin {1520 340}
+make name_net -name A -origin {1520 360}
+make name_net -name A -origin {1520 380}
+make name_net -name A -origin {1520 420}
+make name_net -name A -origin {1520 400}
+make name_net -name A -origin {1520 440}
+make name_net -name A -origin {1520 460}
+make name_net -name B -origin {1520 560}
+make name_net -name B -origin {1520 580}
+make name_net -name B -origin {1520 600}
+make name_net -name B -origin {1520 620}
+make name_net -name B -origin {1520 640}
+make name_net -name B -origin {1520 660}
+make name_net -name B -origin {1520 680}
+make name_net -name B -origin {1520 700}
+make name_net -name B -origin {1520 720}
+make name_net -name B -origin {1520 740}
+make name_net -name B -origin {1520 760}
+make name_net -name B -origin {1520 780}
+make name_net -name B -origin {1520 800}
+make name_net -name B -origin {1520 820}
+make name_net -name B -origin {1520 840}
+make name_net -name B -origin {1520 860}
+make name_net -name B -origin {1520 880}
+make name_net -name B -origin {1520 900}
+make name_net -name B -origin {1520 920}
+make name_net -name B -origin {1520 940}
+make name_net -name B -origin {1520 960}
+make name_net -name B -origin {1520 980}
+make name_net -name B -origin {1520 1000}
+make name_net -name B -origin {1520 1020}
+make name_net -name B -origin {1520 1040}
+make name_net -name B -origin {1520 1060}
+make name_net -name B -origin {1520 1100}
+make name_net -name B -origin {1520 1080}
+make name_net -name B -origin {1520 1120}
+make name_net -name B -origin {1520 1140}
+make name_net -orient R90 -name z2_out -origin {1740 220}
+make name_net -orient R90 -name z3_out -origin {1740 240}
+make name_net -orient R90 -name z4_out -origin {1740 260}
+make name_net -orient R90 -name z5_out -origin {1740 280}
+make name_net -orient R90 -name z6_out -origin {1740 300}
+make name_net -orient R90 -name z7_out -origin {1740 320}
+make name_net -orient R90 -name z8_out -origin {1740 340}
+make name_net -orient R90 -name z9_out -origin {1740 360}
+make name_net -orient R90 -name z10_out -origin {1740 380}
+make name_net -orient R90 -name z11_out -origin {1740 400}
+make name_net -orient R90 -name z12_out -origin {1740 420}
+make name_net -orient R90 -name z13_out -origin {1740 440}
+make name_net -orient R90 -name z14_out -origin {1740 460}
+make name_net -orient R90 -name z15_out -origin {1740 480}
+make name_net -orient R90 -name z16_out -origin {1740 500}
+make name_net -orient R90 -name z17_out -origin {1740 520}
+make name_net -orient R90 -name z18_out -origin {1740 540}
+make name_net -orient R90 -name z19_out -origin {1740 560}
+make name_net -orient R90 -name z20_out -origin {1740 580}
+make name_net -orient R90 -name z21_out -origin {1740 600}
+make name_net -orient R90 -name z22_out -origin {1740 620}
+make name_net -orient R90 -name z23_out -origin {1740 640}
+make name_net -orient R90 -name z24_out -origin {1740 660}
+make name_net -orient R90 -name z25_out -origin {1740 680}
+make name_net -orient R90 -name z26_out -origin {1740 700}
+make name_net -orient R90 -name z27_out -origin {1740 720}
+make name_net -orient R90 -name z28_out -origin {1740 740}
+make name_net -orient R90 -name z29_out -origin {1740 760}
+make name_net -orient R90 -name z30_out -origin {1740 780}
+make name_net -orient R90 -name z31_out -origin {1740 800}
   make_wire 440 40 440 80
   make_wire 520 40 520 80
   make_wire 650 -90 720 -90

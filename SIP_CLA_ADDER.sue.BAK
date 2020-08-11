@@ -1,4 +1,5 @@
 proc SCHEMATIC_SIP_CLA_ADDER {} {
+
 make input -name X0 -origin {-40 -1480}
 make input -name X1 -origin {-30 -1460}
 make input -name X2 -origin {-20 -1440}
@@ -513,5 +514,215 @@ make SIP_XOR -name xi64 -origin {2420 2610}
   make_wire 2400 -780 2400 -770
   make_wire 2400 1560 2550 1560
   make_wire 2400 2330 2550 2330
+
+}
+
+proc ICON_SIP_CLA_ADDER args {
+  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+icon_term -type input -origin {-80 -630} -name X0
+icon_term -type input -origin {-80 -610} -name X1
+icon_term -type input -origin {-80 -590} -name X2
+icon_term -type input -origin {-80 -570} -name X3
+icon_term -type input -origin {-80 -550} -name X4
+icon_term -type input -origin {-80 -530} -name X5
+icon_term -type input -origin {-80 -510} -name X6
+icon_term -type input -origin {-80 -490} -name X7
+icon_term -type input -origin {-80 -470} -name X8
+icon_term -type input -origin {-80 -450} -name X9
+icon_term -type input -origin {-80 -430} -name X10
+icon_term -type input -origin {-80 -410} -name X11
+icon_term -type input -origin {-80 -390} -name X12
+icon_term -type input -origin {-80 -370} -name X13
+icon_term -type input -origin {-80 -350} -name X14
+icon_term -type input -origin {-80 -330} -name X15
+icon_term -type input -origin {-80 -310} -name X16
+icon_term -type input -origin {-80 -290} -name X17
+icon_term -type input -origin {-80 -270} -name X18
+icon_term -type input -origin {-80 -250} -name X19
+icon_term -type input -origin {-80 -230} -name X20
+icon_term -type input -origin {-80 -210} -name X21
+icon_term -type input -origin {-80 -190} -name X22
+icon_term -type input -origin {-80 -170} -name X23
+icon_term -type input -origin {-80 -150} -name X24
+icon_term -type input -origin {-80 -130} -name X25
+icon_term -type input -origin {-80 -110} -name X26
+icon_term -type input -origin {-80 -90} -name X27
+icon_term -type input -origin {-80 -70} -name X28
+icon_term -type input -origin {-80 -50} -name X29
+icon_term -type input -origin {-80 -30} -name X30
+icon_term -type input -origin {-80 -10} -name X31
+icon_term -type output -origin {140 -290} -name Z0
+icon_term -type output -origin {140 -270} -name Z1
+icon_term -type output -origin {140 -250} -name Z2
+icon_term -type output -origin {140 -230} -name Z3
+icon_term -type output -origin {140 -210} -name Z4
+icon_term -type output -origin {140 -190} -name Z5
+icon_term -type output -origin {140 -170} -name Z6
+icon_term -type output -origin {140 -150} -name Z7
+icon_term -type output -origin {140 -130} -name Z8
+icon_term -type output -origin {140 -110} -name Z9
+icon_term -type output -origin {140 -90} -name Z10
+icon_term -type output -origin {140 -70} -name Z11
+icon_term -type output -origin {140 -50} -name Z12
+icon_term -type output -origin {140 -30} -name Z13
+icon_term -type output -origin {140 -10} -name Z14
+icon_term -type output -origin {140 10} -name Z15
+icon_term -type output -origin {140 30} -name Z16
+icon_term -type output -origin {140 50} -name Z17
+icon_term -type output -origin {140 70} -name Z18
+icon_term -type output -origin {140 90} -name Z19
+icon_term -type output -origin {140 110} -name Z20
+icon_term -type output -origin {140 130} -name Z21
+icon_term -type output -origin {140 150} -name Z22
+icon_term -type output -origin {140 170} -name Z23
+icon_term -type output -origin {140 190} -name Z24
+icon_term -type output -origin {140 210} -name Z25
+icon_term -type output -origin {140 230} -name Z26
+icon_term -type output -origin {140 250} -name Z27
+icon_term -type output -origin {140 270} -name Z28
+icon_term -type output -origin {140 290} -name Z29
+icon_term -type output -origin {140 310} -name Z30
+icon_term -type output -origin {140 330} -name Z31
+icon_term -type input -origin {-80 50} -name W0
+icon_term -type input -origin {-80 70} -name W1
+icon_term -type input -origin {-80 90} -name W2
+icon_term -type input -origin {-80 110} -name W3
+icon_term -type input -origin {-80 130} -name W4
+icon_term -type input -origin {-80 150} -name W5
+icon_term -type input -origin {-80 170} -name W6
+icon_term -type input -origin {-80 190} -name W7
+icon_term -type input -origin {-80 210} -name W8
+icon_term -type input -origin {-80 230} -name W9
+icon_term -type input -origin {-80 250} -name W10
+icon_term -type input -origin {-80 270} -name W11
+icon_term -type input -origin {-80 290} -name W12
+icon_term -type input -origin {-80 310} -name W13
+icon_term -type input -origin {-80 330} -name W14
+icon_term -type input -origin {-80 350} -name W15
+icon_term -type input -origin {-80 370} -name W16
+icon_term -type input -origin {-80 390} -name W17
+icon_term -type input -origin {-80 410} -name W18
+icon_term -type input -origin {-80 430} -name W19
+icon_term -type input -origin {-80 450} -name W20
+icon_term -type input -origin {-80 470} -name W21
+icon_term -type input -origin {-80 490} -name W22
+icon_term -type input -origin {-80 510} -name W23
+icon_term -type input -origin {-80 530} -name W24
+icon_term -type input -origin {-80 550} -name W25
+icon_term -type input -origin {-80 570} -name W26
+icon_term -type input -origin {-80 590} -name W27
+icon_term -type input -origin {-80 610} -name W28
+icon_term -type input -origin {-80 630} -name W29
+icon_term -type input -origin {-80 650} -name W30
+icon_term -type input -origin {-80 670} -name W31
+icon_property -origin {-70 -630} -label X0
+icon_property -origin {-70 -610} -label X1
+icon_property -origin {-70 -590} -label X2
+icon_property -origin {-70 -570} -label X3
+icon_property -origin {-70 -550} -label X4
+icon_property -origin {-70 -530} -label X5
+icon_property -origin {-70 -510} -label X6
+icon_property -origin {-70 -490} -label X7
+icon_property -origin {-70 -470} -label X8
+icon_property -origin {-70 -450} -label X9
+icon_property -origin {-70 -430} -label X10
+icon_property -origin {-70 -410} -label X11
+icon_property -origin {-70 -390} -label X12
+icon_property -origin {-70 -370} -label X13
+icon_property -origin {-70 -350} -label X14
+icon_property -origin {-70 -330} -label X15
+icon_property -origin {-70 -310} -label X16
+icon_property -origin {-70 -290} -label X17
+icon_property -origin {-70 -270} -label X18
+icon_property -origin {-70 -250} -label X19
+icon_property -origin {-70 -230} -label X20
+icon_property -origin {-70 -210} -label X21
+icon_property -origin {-70 -190} -label X22
+icon_property -origin {-70 -170} -label X23
+icon_property -origin {-70 -150} -label X24
+icon_property -origin {-70 -130} -label X25
+icon_property -origin {-70 -110} -label X26
+icon_property -origin {-70 -90} -label X27
+icon_property -origin {-70 -70} -label X28
+icon_property -origin {-70 -50} -label X29
+icon_property -origin {-70 -30} -label X30
+icon_property -origin {-70 -10} -label X31
+icon_property -origin {-70 50} -label W0
+icon_property -origin {-70 70} -label W1
+icon_property -origin {-70 90} -label W2
+icon_property -origin {-70 110} -label W3
+icon_property -origin {-70 130} -label W4
+icon_property -origin {-70 150} -label W5
+icon_property -origin {-70 170} -label W6
+icon_property -origin {-70 190} -label W7
+icon_property -origin {-70 210} -label W8
+icon_property -origin {-70 230} -label W9
+icon_property -origin {-70 250} -label W10
+icon_property -origin {-70 270} -label W11
+icon_property -origin {-70 290} -label W12
+icon_property -origin {-70 310} -label W13
+icon_property -origin {-70 330} -label W14
+icon_property -origin {-70 350} -label W15
+icon_property -origin {-70 370} -label W16
+icon_property -origin {-70 390} -label W17
+icon_property -origin {-70 410} -label W18
+icon_property -origin {-70 430} -label W19
+icon_property -origin {-70 450} -label W20
+icon_property -origin {-70 470} -label W21
+icon_property -origin {-70 490} -label W22
+icon_property -origin {-70 510} -label W23
+icon_property -origin {-70 530} -label W24
+icon_property -origin {-70 550} -label W25
+icon_property -origin {-70 570} -label W26
+icon_property -origin {-70 590} -label W27
+icon_property -origin {-70 610} -label W28
+icon_property -origin {-70 630} -label W29
+icon_property -origin {-70 650} -label W30
+icon_property -origin {-70 670} -label W31
+icon_property -origin {130 -290} -anchor e -label Z0
+icon_property -origin {130 -270} -anchor e -label Z1
+icon_property -origin {130 -250} -anchor e -label Z2
+icon_property -origin {130 -230} -anchor e -label Z3
+icon_property -origin {130 -210} -anchor e -label Z4
+icon_property -origin {130 -190} -anchor e -label Z5
+icon_property -origin {130 -170} -anchor e -label Z6
+icon_property -origin {130 -150} -anchor e -label Z7
+icon_property -origin {130 -130} -anchor e -label Z8
+icon_property -origin {130 -110} -anchor e -label Z9
+icon_property -origin {130 -90} -anchor e -label Z10
+icon_property -origin {130 -70} -anchor e -label Z11
+icon_property -origin {130 -50} -anchor e -label Z12
+icon_property -origin {130 -30} -anchor e -label Z13
+icon_property -origin {130 -10} -anchor e -label Z14
+icon_property -origin {130 10} -anchor e -label Z15
+icon_property -origin {130 30} -anchor e -label Z16
+icon_property -origin {130 50} -anchor e -label Z17
+icon_property -origin {130 70} -anchor e -label Z18
+icon_property -origin {130 90} -anchor e -label Z19
+icon_property -origin {130 110} -anchor e -label Z20
+icon_property -origin {130 130} -anchor e -label Z21
+icon_property -origin {130 150} -anchor e -label Z22
+icon_property -origin {130 170} -anchor e -label Z23
+icon_property -origin {130 190} -anchor e -label Z24
+icon_property -origin {130 210} -anchor e -label Z25
+icon_property -origin {130 230} -anchor e -label Z26
+icon_property -origin {130 250} -anchor e -label Z27
+icon_property -origin {130 270} -anchor e -label Z28
+icon_property -origin {130 290} -anchor e -label Z29
+icon_property -origin {130 310} -anchor e -label Z30
+icon_property -origin {130 330} -anchor e -label Z31
+icon_property -origin {-90 -720} -label {$name}
+icon_property -origin {-60 20} -label SIP_CLA_ADDER
+  icon_property -origin {-90 730} -type user -name name -default x
+  icon_property -origin {-90 750} -type user -name example_param -default 1.0
+  icon_line -80 -660 -80 50 -80 360 -80 380
+  icon_line -80 380 -80 690
+  icon_line -80 690 140 690 140 -320
+  icon_line 140 -330 140 -680
+  icon_line 140 -320 140 -330 140 -350
+  icon_line -80 -660 -80 -680
+  icon_line -80 -680 0 -680 0 -680 -10 -680
+  icon_line 140 -680 60 -680
+  icon_arc 0 -700 60 -650 -start 171 -extent 199
 }
 
