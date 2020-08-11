@@ -1,25 +1,205 @@
 proc SCHEMATIC_SIP_TestBench {} {
 make global -name gnd -origin {440 160}
-make global -name gnd -origin {520 160}
 make name_net -name A -origin {440 40}
-make name_net -name B -origin {520 40}
 make pulse -name V0 -pulse_voltage 1.3V -rise_time 0 -fall_time 0 -origin {440 120}
-make pulse -name V1 -pulse_voltage 1.3V -rise_time 0 -fall_time 0 -pulse_width 6ns -period 12ns -origin {520 120}
-make SIP_XOR -name xi0 -origin {820 -60}
-make SIP_XNOR -name xi1 -origin {800 30}
-make name_net -name A -origin {650 -90}
-make name_net -name A -origin {650 20}
-make name_net -name B -origin {650 -50}
-make name_net -name B -origin {650 60}
-make name_net -name xor_out -origin {880 -70}
-make name_net -name xnor_out -origin {880 40}
-  make_wire 440 40 440 80
-  make_wire 520 40 520 80
-  make_wire 650 -90 720 -90
-  make_wire 650 20 720 20
-  make_wire 650 60 720 60
-  make_wire 800 -70 880 -70
-  make_wire 800 40 880 40
-  make_wire 650 -50 720 -50
+make name_net -name B -origin {680 60}
+make SIP_NOT -name xi1 -origin {630 50}
+make SIP_CLA_ADDER -name xi0 -origin {1130 -20}
+make name_net -origin {1440 310}
+make name_net -origin {1440 290}
+make name_net -origin {1440 270}
+make name_net -origin {1440 250}
+make name_net -origin {1440 230}
+make name_net -origin {1440 210}
+make name_net -origin {1440 190}
+make name_net -origin {1440 170}
+make name_net -origin {1440 150}
+make name_net -origin {1440 130}
+make name_net -origin {1440 110}
+make name_net -origin {1440 90}
+make name_net -origin {1440 70}
+make name_net -origin {1440 50}
+make name_net -origin {1440 30}
+make name_net -origin {1440 10}
+make name_net -origin {1440 -10}
+make name_net -origin {1440 -30}
+make name_net -origin {1440 -50}
+make name_net -origin {1440 -70}
+make name_net -origin {1440 -90}
+make name_net -origin {1440 -110}
+make name_net -origin {1440 -130}
+make name_net -origin {1440 -150}
+make name_net -origin {1440 -170}
+make name_net -origin {1440 -190}
+make name_net -origin {1440 -210}
+make name_net -origin {1440 -230}
+make name_net -origin {1440 -250}
+make name_net -origin {1440 -270}
+make name_net -origin {1440 -290}
+make name_net -origin {1440 -310}
+make name_net -origin {880 -30}
+make name_net -origin {880 -50}
+make name_net -origin {880 -70}
+make name_net -origin {880 -90}
+make name_net -origin {880 -110}
+make name_net -origin {880 -130}
+make name_net -origin {880 -150}
+make name_net -origin {880 -170}
+make name_net -origin {880 -190}
+make name_net -origin {880 -210}
+make name_net -origin {880 -230}
+make name_net -origin {880 -250}
+make name_net -origin {880 -270}
+make name_net -origin {880 -290}
+make name_net -origin {880 -310}
+make name_net -origin {880 -330}
+make name_net -origin {880 -350}
+make name_net -origin {880 -370}
+make name_net -origin {880 -390}
+make name_net -origin {880 -410}
+make name_net -origin {880 -430}
+make name_net -origin {880 -450}
+make name_net -origin {880 -470}
+make name_net -origin {880 -490}
+make name_net -origin {880 -510}
+make name_net -origin {880 -530}
+make name_net -origin {880 -550}
+make name_net -origin {880 -570}
+make name_net -origin {880 -590}
+make name_net -origin {880 -610}
+make name_net -origin {880 -630}
+make name_net -origin {880 -650}
+make name_net -origin {880 650}
+make name_net -origin {880 630}
+make name_net -origin {880 610}
+make name_net -origin {880 590}
+make name_net -origin {880 570}
+make name_net -origin {880 550}
+make name_net -origin {880 530}
+make name_net -origin {880 510}
+make name_net -origin {880 490}
+make name_net -origin {880 470}
+make name_net -origin {880 450}
+make name_net -origin {880 430}
+make name_net -origin {880 410}
+make name_net -origin {880 390}
+make name_net -origin {880 370}
+make name_net -origin {880 350}
+make name_net -origin {880 330}
+make name_net -origin {880 310}
+make name_net -origin {880 290}
+make name_net -origin {880 270}
+make name_net -origin {880 250}
+make name_net -origin {880 230}
+make name_net -origin {880 210}
+make name_net -origin {880 190}
+make name_net -origin {880 170}
+make name_net -origin {880 150}
+make name_net -origin {880 130}
+make name_net -origin {880 110}
+make name_net -origin {880 90}
+make name_net -origin {880 70}
+make name_net -origin {880 50}
+make name_net -origin {880 30}
+  make_wire 530 60 440 60
+  make_wire 440 60 440 40
+  make_wire 440 60 440 80
+  make_wire 620 60 680 60
+  make_wire 1440 -310 1270 -310
+  make_wire 1440 -290 1270 -290
+  make_wire 1440 -270 1270 -270
+  make_wire 1440 -250 1270 -250
+  make_wire 1440 -230 1270 -230
+  make_wire 1440 -210 1270 -210
+  make_wire 1440 -190 1270 -190
+  make_wire 1440 -170 1270 -170
+  make_wire 1440 -150 1270 -150
+  make_wire 1440 -130 1270 -130
+  make_wire 1440 -110 1270 -110
+  make_wire 1440 -90 1270 -90
+  make_wire 1440 -70 1270 -70
+  make_wire 1440 -50 1270 -50
+  make_wire 1440 -30 1270 -30
+  make_wire 1440 -10 1270 -10
+  make_wire 1440 10 1270 10
+  make_wire 1440 30 1270 30
+  make_wire 1440 50 1270 50
+  make_wire 1440 70 1270 70
+  make_wire 1440 90 1270 90
+  make_wire 1440 110 1270 110
+  make_wire 1440 130 1270 130
+  make_wire 1440 150 1270 150
+  make_wire 1440 170 1270 170
+  make_wire 1440 190 1270 190
+  make_wire 1440 210 1270 210
+  make_wire 1440 230 1270 230
+  make_wire 1440 250 1270 250
+  make_wire 1440 270 1270 270
+  make_wire 1440 290 1270 290
+  make_wire 1440 310 1270 310
+  make_wire 1050 -650 880 -650
+  make_wire 1050 -630 880 -630
+  make_wire 1050 -610 880 -610
+  make_wire 1050 -590 880 -590
+  make_wire 1050 -570 880 -570
+  make_wire 1050 -550 880 -550
+  make_wire 1050 -530 880 -530
+  make_wire 1050 -510 880 -510
+  make_wire 1050 -490 880 -490
+  make_wire 1050 -470 880 -470
+  make_wire 1050 -450 880 -450
+  make_wire 1050 -430 880 -430
+  make_wire 1050 -410 880 -410
+  make_wire 1050 -390 880 -390
+  make_wire 1050 -370 880 -370
+  make_wire 1050 -350 880 -350
+  make_wire 1050 -330 880 -330
+  make_wire 1050 -310 880 -310
+  make_wire 1050 -290 880 -290
+  make_wire 1050 -270 880 -270
+  make_wire 1050 -250 880 -250
+  make_wire 1050 -230 880 -230
+  make_wire 1050 -210 880 -210
+  make_wire 1050 -190 880 -190
+  make_wire 1050 -170 880 -170
+  make_wire 1050 -150 880 -150
+  make_wire 1050 -130 880 -130
+  make_wire 1050 -110 880 -110
+  make_wire 1050 -90 880 -90
+  make_wire 1050 -70 880 -70
+  make_wire 1050 -50 880 -50
+  make_wire 1050 -30 880 -30
+  make_wire 1050 30 880 30
+  make_wire 1050 50 880 50
+  make_wire 1050 70 880 70
+  make_wire 1050 90 880 90
+  make_wire 1050 110 880 110
+  make_wire 1050 130 880 130
+  make_wire 1050 150 880 150
+  make_wire 1050 170 880 170
+  make_wire 1050 190 880 190
+  make_wire 1050 210 880 210
+  make_wire 1050 230 880 230
+  make_wire 1050 250 880 250
+  make_wire 1050 270 880 270
+  make_wire 1050 290 880 290
+  make_wire 1050 310 880 310
+  make_wire 1050 330 880 330
+  make_wire 1050 350 880 350
+  make_wire 1050 370 880 370
+  make_wire 1050 390 880 390
+  make_wire 1050 410 880 410
+  make_wire 1050 430 880 430
+  make_wire 1050 450 880 450
+  make_wire 1050 470 880 470
+  make_wire 1050 490 880 490
+  make_wire 1050 510 880 510
+  make_wire 1050 530 880 530
+  make_wire 1050 550 880 550
+  make_wire 1050 570 880 570
+  make_wire 1050 590 880 590
+  make_wire 1050 610 880 610
+  make_wire 1050 630 880 630
+  make_wire 1050 650 880 650
 }
 

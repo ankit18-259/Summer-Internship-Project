@@ -1,0 +1,4 @@
+proc SCHEMATIC_SIP_TestBench1 {} {
+make SIP_OR -name xi0 -origin {3550 600}
+}
+

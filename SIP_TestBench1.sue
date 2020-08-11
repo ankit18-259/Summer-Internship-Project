@@ -1,0 +1,205 @@
+proc SCHEMATIC_SIP_TestBench1 {} {
+make global -name gnd -origin {3100 750}
+make name_net -name A -origin {3100 630}
+make name_net -name B -origin {3340 650}
+make name_net -name z0_out -origin {4100 280}
+make name_net -name z1_out -origin {4100 300}
+make name_net -name z2_out -origin {4100 320}
+make name_net -name z3_out -origin {4100 340}
+make name_net -name z4_out -origin {4100 360}
+make name_net -name z5_out -origin {4100 380}
+make name_net -name z6_out -origin {4100 400}
+make name_net -name z7_out -origin {4100 420}
+make name_net -name z8_out -origin {4100 440}
+make name_net -name z9_out -origin {4100 460}
+make name_net -name z10_out -origin {4100 480}
+make name_net -name z11_out -origin {4100 500}
+make name_net -name z12_out -origin {4100 520}
+make name_net -name z13_out -origin {4100 540}
+make name_net -name z13_out -origin {4100 560}
+make name_net -name z14_out -origin {4100 580}
+make name_net -name z15_out -origin {4100 600}
+make name_net -name z16_out -origin {4100 620}
+make name_net -name z17_out -origin {4100 640}
+make name_net -name z18_out -origin {4100 660}
+make name_net -name z19_out -origin {4100 680}
+make name_net -name z20_out -origin {4100 700}
+make name_net -name z21_out -origin {4100 720}
+make name_net -name z22_out -origin {4100 740}
+make name_net -name z23_out -origin {4100 760}
+make name_net -name z24_out -origin {4100 780}
+make name_net -name z25_out -origin {4100 800}
+make name_net -name z26_out -origin {4100 820}
+make name_net -name z27_out -origin {4100 840}
+make name_net -name z28_out -origin {4100 860}
+make name_net -name z29_out -origin {4100 880}
+make name_net -name z30_out -origin {4100 900}
+make pulse -name V0 -pulse_voltage 1.3V -rise_time 0 -fall_time 0 -origin {3100 710}
+make SIP_NOT -name xi0 -origin {3290 640}
+make SIP_CLA_ADDER -name xi1 -origin {3790 570}
+make name_net -name B -origin {3540 -60}
+make name_net -name B -origin {3540 -40}
+make name_net -name B -origin {3540 -20}
+make name_net -name B -origin {3540 0}
+make name_net -name B -origin {3540 20}
+make name_net -name B -origin {3540 40}
+make name_net -name B -origin {3540 60}
+make name_net -name B -origin {3540 80}
+make name_net -name B -origin {3540 140}
+make name_net -name B -origin {3540 120}
+make name_net -name B -origin {3540 180}
+make name_net -name B -origin {3540 200}
+make name_net -name B -origin {3540 220}
+make name_net -name B -origin {3540 240}
+make name_net -name B -origin {3540 260}
+make name_net -name B -origin {3540 160}
+make name_net -name B -origin {3540 100}
+make name_net -name B -origin {3540 280}
+make name_net -name B -origin {3540 300}
+make name_net -name B -origin {3540 320}
+make name_net -name B -origin {3540 340}
+make name_net -name B -origin {3540 360}
+make name_net -name B -origin {3540 380}
+make name_net -name B -origin {3540 400}
+make name_net -name B -origin {3540 420}
+make name_net -name B -origin {3540 480}
+make name_net -name B -origin {3540 460}
+make name_net -name B -origin {3540 520}
+make name_net -name B -origin {3540 540}
+make name_net -name B -origin {3540 560}
+make name_net -name B -origin {3540 500}
+make name_net -name B -origin {3540 440}
+make name_net -name A -origin {3540 620}
+make name_net -name A -origin {3540 640}
+make name_net -name A -origin {3540 660}
+make name_net -name A -origin {3540 680}
+make name_net -name A -origin {3540 700}
+make name_net -name A -origin {3540 720}
+make name_net -name A -origin {3540 740}
+make name_net -name A -origin {3540 760}
+make name_net -name A -origin {3540 780}
+make name_net -name A -origin {3540 800}
+make name_net -name A -origin {3540 820}
+make name_net -name A -origin {3540 840}
+make name_net -name A -origin {3540 860}
+make name_net -name A -origin {3540 880}
+make name_net -name A -origin {3540 900}
+make name_net -name A -origin {3540 920}
+make name_net -name A -origin {3540 940}
+make name_net -name A -origin {3540 960}
+make name_net -name A -origin {3540 980}
+make name_net -name A -origin {3540 1000}
+make name_net -name A -origin {3540 1020}
+make name_net -name A -origin {3540 1040}
+make name_net -name A -origin {3540 1060}
+make name_net -name A -origin {3540 1080}
+make name_net -name A -origin {3540 1100}
+make name_net -name A -origin {3540 1120}
+make name_net -name A -origin {3540 1140}
+make name_net -name A -origin {3540 1160}
+make name_net -name A -origin {3540 1180}
+make name_net -name A -origin {3540 1200}
+make name_net -name A -origin {3540 1220}
+make name_net -name A -origin {3540 1240}
+  make_wire 3190 650 3100 650
+  make_wire 3280 650 3340 650
+  make_wire 4100 280 3930 280
+  make_wire 4100 300 3930 300
+  make_wire 4100 320 3930 320
+  make_wire 4100 340 3930 340
+  make_wire 4100 360 3930 360
+  make_wire 4100 380 3930 380
+  make_wire 4100 400 3930 400
+  make_wire 4100 420 3930 420
+  make_wire 4100 440 3930 440
+  make_wire 4100 460 3930 460
+  make_wire 4100 480 3930 480
+  make_wire 4100 500 3930 500
+  make_wire 4100 520 3930 520
+  make_wire 4100 540 3930 540
+  make_wire 4100 560 3930 560
+  make_wire 4100 580 3930 580
+  make_wire 4100 600 3930 600
+  make_wire 4100 620 3930 620
+  make_wire 4100 640 3930 640
+  make_wire 4100 660 3930 660
+  make_wire 4100 680 3930 680
+  make_wire 4100 700 3930 700
+  make_wire 4100 720 3930 720
+  make_wire 4100 740 3930 740
+  make_wire 4100 760 3930 760
+  make_wire 4100 780 3930 780
+  make_wire 4100 800 3930 800
+  make_wire 4100 820 3930 820
+  make_wire 4100 840 3930 840
+  make_wire 4100 860 3930 860
+  make_wire 4100 880 3930 880
+  make_wire 4100 900 3930 900
+  make_wire 3710 -60 3540 -60
+  make_wire 3710 -40 3540 -40
+  make_wire 3710 -20 3540 -20
+  make_wire 3710 0 3540 0
+  make_wire 3710 20 3540 20
+  make_wire 3710 40 3540 40
+  make_wire 3710 60 3540 60
+  make_wire 3710 80 3540 80
+  make_wire 3710 100 3540 100
+  make_wire 3710 120 3540 120
+  make_wire 3710 140 3540 140
+  make_wire 3710 160 3540 160
+  make_wire 3710 180 3540 180
+  make_wire 3710 200 3540 200
+  make_wire 3710 220 3540 220
+  make_wire 3710 240 3540 240
+  make_wire 3710 260 3540 260
+  make_wire 3710 280 3540 280
+  make_wire 3710 300 3540 300
+  make_wire 3710 320 3540 320
+  make_wire 3710 340 3540 340
+  make_wire 3710 360 3540 360
+  make_wire 3710 380 3540 380
+  make_wire 3710 400 3540 400
+  make_wire 3710 420 3540 420
+  make_wire 3710 440 3540 440
+  make_wire 3710 460 3540 460
+  make_wire 3710 480 3540 480
+  make_wire 3710 500 3540 500
+  make_wire 3710 520 3540 520
+  make_wire 3710 540 3540 540
+  make_wire 3710 560 3540 560
+  make_wire 3710 660 3540 660
+  make_wire 3710 680 3540 680
+  make_wire 3710 700 3540 700
+  make_wire 3710 720 3540 720
+  make_wire 3710 740 3540 740
+  make_wire 3710 760 3540 760
+  make_wire 3710 780 3540 780
+  make_wire 3710 800 3540 800
+  make_wire 3710 820 3540 820
+  make_wire 3710 840 3540 840
+  make_wire 3710 860 3540 860
+  make_wire 3710 880 3540 880
+  make_wire 3710 900 3540 900
+  make_wire 3710 920 3540 920
+  make_wire 3710 940 3540 940
+  make_wire 3710 980 3540 980
+  make_wire 3710 1000 3540 1000
+  make_wire 3710 1020 3540 1020
+  make_wire 3710 1040 3540 1040
+  make_wire 3710 1060 3540 1060
+  make_wire 3710 1080 3540 1080
+  make_wire 3710 1100 3540 1100
+  make_wire 3710 1120 3540 1120
+  make_wire 3710 1140 3540 1140
+  make_wire 3710 1160 3540 1160
+  make_wire 3710 1180 3540 1180
+  make_wire 3710 1200 3540 1200
+  make_wire 3710 1220 3540 1220
+  make_wire 3710 1240 3540 1240
+  make_wire 3100 630 3100 650
+  make_wire 3100 650 3100 670
+  make_wire 3540 620 3710 620
+  make_wire 3540 640 3710 640
+  make_wire 3710 960 3540 960
+}
+
