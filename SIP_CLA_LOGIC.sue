@@ -1,4 +1,5 @@
 proc SCHEMATIC_SIP_CLA_LOGIC {} {
+
 make name_net -name G0 -origin {-8780 -9750}
 make name_net -name G1 -origin {-8780 -9590}
 make name_net -name G2 -origin {-8780 -9430}
@@ -9042,11 +9043,11 @@ make SIP_OR -name xi1149 -origin {4770 27160}
   make_line -9230 -4570 -9400 -4570 -9400 -4570
   make_line -8990 -4610 -9160 -4610 -9160 -4610
   make_line 5760 -8040 5760 -7160
+
 }
 
 proc ICON_SIP_CLA_LOGIC args {
-
-  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
 icon_term -type input -origin {-100 -620} -name A_00
 icon_term -type input -origin {-100 -600} -name A_01
 icon_term -type input -origin {-100 -580} -name A_02
@@ -9241,9 +9242,7 @@ icon_property -origin {90 600} -anchor e -label Y_30
 icon_property -origin {90 640} -anchor e -label Y_31
 icon_property -origin {-100 -700} -label {$name}
 icon_property -origin {-60 -640} -label SIP_CLA_LOGIC
-icon_property -origin {-90 670} -label {example_param=$example_param}
-  icon_property -origin {-90 730} -type user -name name -default x
-  icon_property -origin {-90 750} -type user -name example_param -default 1.0
+  icon_property -origin {-110 690} -type user -name name -default x
   icon_line -100 -630 -100 660 90 660 100 660 100 -630 100 -630
   icon_line 100 -630 100 -640 100 -640
   icon_line -100 -630 -100 -640
@@ -9254,6 +9253,5 @@ icon_property -origin {-90 670} -label {example_param=$example_param}
   icon_line 100 -660 100 -680 90 -680
   icon_line -100 -660 -100 -680
   icon_arc -20 -700 20 -660 -start 180 -extent 180
-
 }
 

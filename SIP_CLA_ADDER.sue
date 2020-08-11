@@ -1,5 +1,6 @@
 proc SCHEMATIC_SIP_CLA_ADDER {} {
 
+
 make input -name X0 -origin {-40 -1480}
 make input -name X1 -origin {-30 -1460}
 make input -name X2 -origin {-20 -1440}
@@ -515,10 +516,11 @@ make SIP_XOR -name xi64 -origin {2420 2610}
   make_wire 2400 1560 2550 1560
   make_wire 2400 2330 2550 2330
 
+
 }
 
 proc ICON_SIP_CLA_ADDER args {
-  icon_setup $args {{origin {0 0}} {orient R0} {name x} {example_param 1.0}}
+  icon_setup $args {{origin {0 0}} {orient R0} {name x}}
 icon_term -type input -origin {-80 -630} -name X0
 icon_term -type input -origin {-80 -610} -name X1
 icon_term -type input -origin {-80 -590} -name X2
@@ -714,7 +716,6 @@ icon_property -origin {130 330} -anchor e -label Z31
 icon_property -origin {-90 -720} -label {$name}
 icon_property -origin {-60 20} -label SIP_CLA_ADDER
   icon_property -origin {-90 730} -type user -name name -default x
-  icon_property -origin {-90 750} -type user -name example_param -default 1.0
   icon_line -80 -660 -80 50 -80 360 -80 380
   icon_line -80 380 -80 690
   icon_line -80 690 140 690 140 -320
