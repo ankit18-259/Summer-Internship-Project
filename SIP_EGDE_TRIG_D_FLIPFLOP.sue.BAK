@@ -1,0 +1,68 @@
+proc SCHEMATIC_SIP_EGDE_TRIG_D_FLIPFLOP {} {
+make SIP_AND -name xi0 -origin {6420 2300}
+make SIP_AND -name xi1 -origin {6420 2600}
+make SIP_NOR -name xi2 -origin {6670 2320}
+make SIP_NOR -name xi3 -origin {6700 2580}
+make SIP_NOT -name xi4 -origin {6680 2760}
+make SIP_NOT -name xi5 -origin {6090 2470}
+make SIP_NOT -name xi6 -origin {6250 2620}
+make SIP_AND -name xi7 -origin {7060 2310}
+make SIP_AND -name xi8 -origin {7060 2550}
+make SIP_NOR -name xi9 -origin {7350 2330}
+make SIP_NOR -name xi10 -origin {7350 2530}
+make output -name Qn -origin {7600 2340}
+make output -name Q -origin {7600 2540}
+make input -name D -origin {5920 2290}
+make input -name C -origin {5920 2480}
+  make_wire 6320 2330 6270 2330
+  make_wire 6320 2590 6270 2590
+  make_wire 6130 2630 6150 2630
+  make_wire 6130 2290 6320 2290
+  make_wire 6130 2290 5920 2290
+  make_wire 6240 2630 6320 2630
+  make_wire 5920 2480 5990 2480
+  make_wire 6130 2290 6130 2630
+  make_wire 6410 2310 6570 2310
+  make_wire 6410 2610 6600 2610
+  make_wire 6520 2400 6720 2400
+  make_wire 6690 2590 6720 2590
+  make_wire 6720 2580 6960 2580
+  make_wire 6520 2350 6520 2400
+  make_wire 6570 2350 6520 2350
+  make_wire 6530 2510 6700 2510
+  make_wire 6660 2300 6660 2330
+  make_wire 6600 2570 6530 2570
+  make_wire 6530 2510 6530 2570
+  make_wire 6700 2300 6660 2300
+  make_wire 6700 2300 6960 2300
+  make_wire 6930 2540 6960 2540
+  make_wire 6960 2340 6930 2340
+  make_wire 6700 2300 6700 2510
+  make_wire 7050 2320 7250 2320
+  make_wire 6720 2400 6720 2580
+  make_wire 6720 2580 6720 2590
+  make_wire 7050 2560 7250 2560
+  make_wire 7200 2420 7350 2420
+  make_wire 7340 2540 7350 2540
+  make_wire 7350 2540 7600 2540
+  make_wire 7200 2360 7200 2420
+  make_wire 7250 2360 7200 2360
+  make_wire 7200 2450 7370 2450
+  make_wire 7370 2340 7340 2340
+  make_wire 7370 2340 7600 2340
+  make_wire 7200 2450 7200 2520
+  make_wire 7250 2520 7200 2520
+  make_wire 7370 2340 7370 2450
+  make_wire 7350 2420 7350 2540
+  make_wire 6580 2770 6080 2770
+  make_wire 6080 2480 6270 2480
+  make_wire 6270 2480 6270 2590
+  make_wire 6270 2480 6270 2330
+  make_wire 6080 2480 6080 2770
+  make_wire 6670 2770 6870 2770
+  make_wire 6870 2770 6870 2450
+  make_wire 6870 2450 6930 2450
+  make_wire 6930 2450 6930 2340
+  make_wire 6930 2450 6930 2540
+}
+
